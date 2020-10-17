@@ -1,4 +1,6 @@
-# Practice-Car
+An object-oriented command line car with Java classes and interfaces. From RevaturePro.
+
+#Practice-Car
 
 Now we're going to take some time to practice writing some simple Java programs. In doing so, you will become familiar with Eclipse and how to run your applications.
 
