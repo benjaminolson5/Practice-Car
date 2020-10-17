@@ -11,7 +11,8 @@ Now, you will create additional classes that represent the different components 
 
 1) Every class representing a car part should inherit from a superclass called "CarPart." The CarPart class will have at least the following states and behaviors:
 
-    a) condition - an integer that represents the remaining durability of the part (starts at 100, goes down to 0 when the part is broken)
+    a) condition - an integer that represents the remaining durability of the part (starts at 100, goes down to 0 when the part is broken).
+    
     b) status() - a method that prints the condition of the part to the console.
     
 2) The CarPart class should also implement a Functional interface, which declares a method "function()".
