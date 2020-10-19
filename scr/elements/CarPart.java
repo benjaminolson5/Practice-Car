@@ -1,6 +1,7 @@
+package elements;
 import java.util.Random;
 
-abstract class CarPart implements Functional{
+public abstract class CarPart implements Functional{
 	
 	public int serialNumber;
 	public int condition = 100;
@@ -9,19 +10,25 @@ abstract class CarPart implements Functional{
 	public boolean broken;
 	public String partName;
 	
+//	public void degradate () {
+//		condition = (this.condition - 
+//	}
+	
 //	GETTERS
 	
-	public void generateSerialNumber() {
-		Random rand = new Random();
-		this.serialNumber = rand.nextInt(9);;
+	@Override
+	public String toString() {
+		return "CarPart [serialNumber=" + serialNumber + ", condition=" + condition + ", broken=" + broken
+				+ ", partName=" + partName + "]";
 	}
+	
 	public int getSerialNumber() {
 		return serialNumber;
 	}
 	public int getCondition() {
 		return condition;
 	}
-	public boolean isBroken() {
+	public boolean getBrokenStatus() {
 		return broken;
 	}
 	public String getPartName() {
@@ -30,11 +37,19 @@ abstract class CarPart implements Functional{
 	
 //	SETTERS
 	
-	public void setSerialNumber(int serialNumber) {
-		this.serialNumber = serialNumber;
+	public void generateSerialNumber() {
+		Random rand = new Random();
+		this.serialNumber = rand.nextInt(9);;
 	}
+	
 	public void setCondition(int condition) {
-		this.condition = condition;
+		if (this.condition == 0) {
+			this.condition = condition;
+			this.broken = true;
+		} else {
+			this.condition = condition;
+		}
+		
 	}
 	public void setBroken(boolean broken) {
 		this.broken = broken;
